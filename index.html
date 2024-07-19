@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <br>
+    <br>
+    <h1 id="text-balance" class="animated-title">Welcome to Rock Paper Scissors Game</h1>
+    <br>
+    <div class="container">
+        <h1>Rock-Paper-Scissors Game</h1>
+        <div id="gameMode">
+            <p>Select game mode:</p>
+            <button id="pvc">Player vs Computer</button>
+            <button id="pvp">Player vs Player</button>
+        </div>
+        <div id="rounds" class="hidden">
+            <p>Enter the number of rounds to play:</p>
+            <input type="number" id="roundsInput" min="1" value="1">
+            <button id="startGame">Start Game</button>
+        </div>
+        <div id="game" class="hidden">
+            <p>Round <span id="currentRound">1</span></p>
+           <div id="player1" class="player">
+                <p>Player 1's turn:</p>
+                <button class="choice" data-choice="1"><img src="rock.png" alt="Rock"></button>
+                <button class="choice" data-choice="2"><img src="paper.png" alt="Paper"></button>
+                <button class="choice" data-choice="3"><img src="scissors.png" alt="Scissors"></button>
+            </div>
+            <div id="player2" class="player hidden">
+                <p>Player 2's turn:</p>
+                <button class="choice" data-choice="1"><img src="rock.png" alt="Rock"></button>
+                <button class="choice" data-choice="2"><img src="paper.png" alt="Paper"></button>
+                <button class="choice" data-choice="3"><img src="scissors.png" alt="Scissors"></button>
+            </div>
+            <div id="results" class="hidden">
+                <p id="resultMessage"></p>
+                <button id="nextRound">Next Round</button>
+                <button id="endGame">End Game</button>
+            </div>
+        </div>
+        <div id="finalScore" class="hidden">
+            <p>Final Score:</p>
+            <p>Player 1: <span id="player1Score">0</span></p>
+            <p>Player 2: <span id="player2Score">0</span></p>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+    <script src="games.js"></script>
+</body>
+</html>
